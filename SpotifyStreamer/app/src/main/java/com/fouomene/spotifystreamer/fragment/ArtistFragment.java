@@ -98,7 +98,8 @@ public class ArtistFragment extends Fragment {
                 if ((event.getAction() == KeyEvent.ACTION_DOWN)
                         && (keyCode == KeyEvent.KEYCODE_ENTER)) {
 
-                     updateSeach();
+                    mPosition = 0;
+                    updateSeach();
                      Utility.setPreferredArtist(getActivity(),mEditTextArtist.getText().toString());
 
                     return true;
@@ -111,6 +112,7 @@ public class ArtistFragment extends Fragment {
         mImageSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mPosition = 0;
                 updateSeach();
                 Utility.setPreferredArtist(getActivity(), mEditTextArtist.getText().toString());
             }
